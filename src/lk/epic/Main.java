@@ -8,12 +8,26 @@ public class Main {
         Printer printer = new Printer(); //Printer Object for Students to Print
         printer.start();
 
-        ExecutorService pool = Executors.newFixedThreadPool(5);
-        for (int i = 1; i <= 5; i++) {
-            Thread student = new Thread(new Student(printer));
-            student.setName("Student " + i); //set Thread Name
-            pool.execute(student);
-        }
-        pool.shutdown();
+        Thread Student1 = new Thread(new Student(printer));
+        Student1.setName("S1");
+        Student1.start();
+
+        Thread Student2 = new Thread(new Student(printer));
+        Student1.setName("S2");
+        Student1.start();
+
+        Thread Student3= new Thread(new Student(printer));
+        Student1.setName("S3");
+        Student1.start();
+
+        Thread Student4 = new Thread(new Student(printer));
+        Student1.setName("S4");
+        Student1.start();
+
+        Thread Student5 = new Thread(new Student(printer));
+        Student1.setName("S5");
+        Student1.start();
+
+
     }
 }
